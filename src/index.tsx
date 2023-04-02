@@ -3,16 +3,14 @@ import ReactDOM from "react-dom";
 
 import { ThemeProvider } from "styled-components";
 import App from "./App";
-import { theme } from "./theme";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
 ReactDOM.render(
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <App />
   </QueryClientProvider>,
   document.getElementById("root")
 );
